@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom retro-style CSS */
+        body {
+            background-color: #000;
+            color: #c0c0c0;
+        }
+        .station {
+            background-color: #333;
+            border: 2px solid #c0c0c0;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #ffd700;
+        }
+        #alertBox {
+            height: 50px;
+            margin: 10px;
+        }
+    </style>
+    <title>Mission Control</title>
+</head>
+<body>
+    <div id="missionControl" class="container-fluid">
+        <!-- UT Time -->
+        <h1 class="display-3 text-center">UT Time: <span id="utTime">00:00:00</span></h1>
+
+        <div class="row">
+            <!-- First row -->
+            <div class="col-md-4">
+                <div class="station" id="boostStation">
+                    <h2>Boost Station</h2>
+                    <p id="boostCurrentThrust">Current Thrust: </p>
+                    <p id="boostMaxThrust">Max Thrust: </p>
+                    <p id="boostFuelLevels">Fuel Levels: </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="station" id="flightStation">
+                    <h2>Flight Station</h2>
+                    <p id="flightAltitude">Altitude: </p>
+                    <p id="flightSpeed">Speed: </p>
+                    <p id="flightOrbitalParameters">Orbital Parameters: </p>
+                    <p id="flightAtmosphericDensity">Atmospheric Density: </p>
+                    <p id="flightPitch">Pitch: </p>
+                    <p id="flightRoll">Roll: </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="station" id="capcomStation">
+                    <h2>CapCom Station</h2>
+                    <p id="capcomMissionPhase">Mission Phase: </p>
+                    <p id="capcomCommandQueue">Command Queue: </p>
+                    <p id="capcomSpecialMessages">Special Messages: </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Second row -->
+            <div class="col-md-4">
+                <div class="station" id="gncStation">
+                    <h2>GNC Station</h2>
+                    <p id="gncHeading">Heading: </p>
+                    <p id="gncInclination">Inclination: </p>
+                    <p id="gncManeuverNodes">Maneuver Nodes: </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="station" id="eecomTelmuStation">
+                    <h2>EECOM/Telmu Station</h2>
+                    <p id="eecomBatteryLevels">Battery Levels: </p>
+                    <p id="eecomSolarPanelStatus">Solar Panel Status: </p>
+                    <p id="eecomRadioStrength">Radio Strength: </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="station" id="controlStation">
+                    <h2>Control Station</h2>
+                    <p id="controlGeneralStatus">General Status: </p>
+                    <p id="controlCriticalAlerts">Critical Alerts: </p>
+                    <p id="controlDataSummary">Data Summary: </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Flight Engineer full width below -->
+            <div class="col-md-12">
+                <div class="station" id="flightEngineerStation">
+                    <h2>Flight Engineer Station</h2>
+                    <p id="engineerHeatShield">Heat Shield Status: </p>
+                    <p id="engineerParachutes">Parachutes: </p>
+                    <p id="engineerStages">Stages: </p>
+                    <p id="engineerLandingGear">Landing Gear: </p>
+                    <p id="engineerPayloads">Payloads: </p>
+                    <p id="engineerAerodynamicForces">Aerodynamic Forces: </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Alert box full width below -->
+            <div class="col-md-12">
+                <div id="alertBox" class="bg-success text-center">
+                    <!-- Alert text here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
