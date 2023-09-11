@@ -1,0 +1,29 @@
+Folder PATH listing
+Volume serial number is 66A3-2056
+C:.
+|   output.doc
+|   README.md
+|   script.js
+|   style.css
+|   
++---backend
+|   |   app,.py
+|   |   db.py
+|   |   krpc_interface.py
+|   |   phase_manager.py
+|   |   
+|   \---stations
+|           boost_station.py
+|           capcom_station.py
+|           control_station.py
+|           eecom_telmu_station.py
+|           flight_engineer_station.py
+|           flight_station.py
+|           gnc_station.py
+|           
++---db
+|       flights.db
+|       
+\---Frontend
+        Index.html
+        
