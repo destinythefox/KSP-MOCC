@@ -1,5 +1,5 @@
 from flask import Flask
-from stations import boost_station, flight_station, capcom_station, control_station, eecom_telmu_station, flight_engineer_station, gnc_station
+from stations import boost_station, flight_station, capcom_station, control_station, eecom_telmu_station, flight_engineer_station, gnc_station, ut_station
 
 app = Flask(__name__)
 
@@ -11,6 +11,8 @@ app.register_blueprint(control_station.bp)
 app.register_blueprint(eecom_telmu_station.bp)
 app.register_blueprint(flight_engineer_station.bp)
 app.register_blueprint(gnc_station.bp)
+app.register_blueprint(ut_station.bp)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
