@@ -1,4 +1,4 @@
-from krpc_interface import get_flight_data, get_thrust_data  # Import other necessary functions
+from app.py import get_flight_data, get_thrust_data  # Import other necessary functions
 
 class PhaseManager:
     def __init__(self):
